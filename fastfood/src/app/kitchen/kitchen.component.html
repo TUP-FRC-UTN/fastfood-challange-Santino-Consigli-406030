@@ -1,0 +1,16 @@
+<div>
+    <h4>Pendiente de cocinar</h4>
+    <ul>
+        @for (pedido of pedidosPendientes; track pedido) {
+            <li>({{pedido.number}})-{{pedido.description}} <button class="btn btn-primary" (click)="pedidoToCoccion(pedido)">Cocinar</button></li>
+        }
+    </ul>
+</div>
+<div>
+    <h4>Pedidos en coccion</h4>
+    <ul>
+        @for (pedido of pedidosToCoccion; track pedido) {
+            <li>({{pedido.number}}) {{pedido.name}} -{{pedido.description}} <button class="btn btn-primary"(click)="pedidoToEntregar(pedido)">Pedido terminado!</button></li>
+        }
+    </ul>
+</div>

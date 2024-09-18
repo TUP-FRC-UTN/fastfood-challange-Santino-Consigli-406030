@@ -1,0 +1,8 @@
+<div>
+    <h4>Pedidos listos para entregar</h4>
+    <ul>
+        @for (pedido of pedidosToEntregar; track pedido) {
+            <li>({{pedido.number}})-{{pedido.description}} <button class="btn btn-primary" (click)="pedidoEntregado(pedido)">Entregar!</button></li>
+        }
+    </ul>
+</div>
